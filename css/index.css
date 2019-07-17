@@ -143,9 +143,8 @@ table {
   width: 100%;
 }
 .table .displayFlexMobile {
-  width: 100%;
+  display: flex;
   flex-wrap: wrap;
-  font-size: 1.2rem;
 }
 .table td,
 .table th {
@@ -169,7 +168,6 @@ html {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  border: 10px solid lawngreen;
 }
 .container figure {
   margin: 20px 0px 10px 30px;
@@ -198,6 +196,22 @@ html {
   justify-content: center;
   align-content: center;
 }
+@media screen and (max-width: 500px) {
+  .container .history {
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 5px 5px 5px #888;
+  }
+  .container .history nav {
+    display: flex;
+    justify-content: center;
+  }
+  .container .history .skills {
+    width: 100%;
+    margin: 2rem;
+  }
+}
 .container .skills {
   width: 20%;
   font-size: 2rem;
@@ -213,6 +227,14 @@ html {
 }
 .container .goodAt-header {
   text-align: center;
+}
+.container .email {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #607d8b;
+}
+.container .email:hover {
+  color: #fbc02d;
 }
 h3 {
   font-size: 1.5rem;
@@ -248,18 +270,19 @@ nav a:hover {
   padding: 5px 20px;
 }
 table {
+  border: 3px solid black;
   font-size: 1.7rem;
   padding: 20px;
   width: 80%;
+  box-shadow: 5px 5px 5px #888;
 }
 table table {
   border-collapse: collapse;
   width: 100%;
 }
 table .displayFlexMobile {
-  width: 100%;
+  display: flex;
   flex-wrap: wrap;
-  font-size: 1.2rem;
 }
 table td,
 table th {
@@ -270,12 +293,10 @@ table th {
 table tr:nth-child(even) {
   background-color: #dddddd;
 }
-@media screen and (max-width: 500px) {
-  flex-direction: column;
-}
 .copy {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .home-link {
   margin: 0 27px 0 15px;

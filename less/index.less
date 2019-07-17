@@ -139,6 +139,7 @@ table {
 @link-color: #607d8b;
 @header-font: 'Nunito Sans', sans-serif;
 @font-color: #000000;
+@font-size : 1.2rem;
 
 //end variables
 
@@ -161,9 +162,8 @@ table {
   }
 
   .displayFlexMobile {
-    width: 100%;
+    display: flex;
     flex-wrap: wrap;
-    font-size: 1.2rem;
   }
 
   td,
@@ -195,9 +195,6 @@ html {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-
-  border: 10px solid lawngreen;
-
   figure {
     margin: 20px 0px 10px 30px;
   }
@@ -226,6 +223,21 @@ html {
   }
   .history {
     .displayFlex();
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+      font-size: 1.2rem;
+      text-align: center;
+      box-shadow: 5px 5px 5px #888;
+      nav {
+        display: flex;
+        justify-content: center;
+      }
+
+      .skills {
+        width: 100%;
+        margin: 2rem;
+      }
+    }
   }
 
   .skills {
@@ -245,6 +257,15 @@ html {
 
   .goodAt-header {
     .textAlign();
+  }
+
+  .email {
+    font-size: @font-size;
+    text-decoration: none;
+    color: #607d8b;
+  }
+  .email:hover {
+    color: #fbc02d;
   }
 }
 
@@ -291,17 +312,17 @@ nav {
 
 table {
   .table();
+  border: 3px solid black;
   font-size: 1.7rem;
   padding: 20px;
   width: 80%;
+  box-shadow: 5px 5px 5px #888;
 }
 
-@media screen and (max-width: 500px) {
-  flex-direction: column;
-}
 .copy {
   .textAlign();
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .home-link {
